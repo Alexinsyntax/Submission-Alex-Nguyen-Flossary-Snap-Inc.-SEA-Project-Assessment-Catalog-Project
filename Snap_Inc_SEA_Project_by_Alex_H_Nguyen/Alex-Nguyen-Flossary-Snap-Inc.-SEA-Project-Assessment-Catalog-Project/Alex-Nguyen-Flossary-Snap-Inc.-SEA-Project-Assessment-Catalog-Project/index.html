@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flossary - Dental | Home</title>
+    <meta name="description" content="Toothbrush Analysis Catalog" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="img/png" href="assets/floss_favicon.PNG">
+  </head>
+
+  <body>
+    <img src="assets/flossary_header.JPG" style="display: block; margin: 0 auto; width: 800px; height: auto;">
+    <div class="sub-header">
+      <h1>Differences in Toothbrush Types</h1>
+      <h3> Play around with the study results catalog to make your own conclusions</h4>
+    </div>
+
+  <nav class="navbar">
+    <a href="#cards">Cards</a>
+    <a href="#table">Table</a>
+    <a href="#chart">Chart</a>
+    <a href="https://www.researchgate.net/publication/329318743_A_single_brushing_study_to_compare_plaque_removal_efficacy_of_a_manual_toothbrush_an_electric_toothbrush_and_an_ultrasonic_toothbrush" target="_blank">Research Paper</a>
+    <button class="nav-btn" onclick="toggleConclusions()">My Conclusions</button>
+  </nav>
+
+
+  <div class="conclusions-box" id="conclusionsBox">
+    <div class="conclusions-content">
+      <h3>My conclusions</h3>
+      <p>
+      Based on the data, the difference really comes to preference. Whatever <strong>toothbrush you can use properly
+      and consistently</strong> will yield the <strong>best results</strong>. However, I'd like to add that I did observe benefits from
+      "powered-toothbrushes" for people with <strong>disabilities</strong> with symptoms like lack of <strong>hand dexterity.</strong> 
+
+      Limitations: I'd say a lot of the studies and data I looked at for this project explicitly say that their 
+      data and sample size include non-institutionalized people, so most of those people are <strong>able-bodied</strong> or may not
+      have mental health issues affecting their oral hygiene. Also, this public study gave an extra minute for manual
+      brushing, which could skew the data.
+
+      Overall, the difference is negligible. The <strong>"best" toothbrush</strong> is the one you use <strong>well.</strong>
+      </p>
+      <button class="close-btn" onclick="toggleConclusions()">Close</button>
+    </div>
+  </div>
+
+    <div id="controls">
+      <input type="text" id="searchBox" placeholder="Search...">
+      <select id="typeFilter">
+        <option value="">All types</option>
+        <option value="manual">Manual</option>
+        <option value="electric">Electric</option>
+        <option value="ultrasonic">Ultrasonic</option>
+      </select>
+      <select id="brushedFilter">
+        <option value=""">Before &amp; after</option>
+        <option value="yes">Before brush</option>
+        <option value="no">After brush</option>
+      </select>
+    </div>
+
+    <div id="statsContainer"></div>
+
+    <p class="section-label" id="cards">Cards</p>
+    <div id="card-container"></div>
+
+    <div class="card" style="display: none">
+      <div class="card-content">
+        <h2>Toothbrush Type</h2>
+        <img src="" alt="" />"
+        <div class="card-badge"></div>
+        <ul>
+          <li>Plaque Index: </li>
+          <li>Frequency: </li>
+          <li>Percentage: </li>
+          <li>Before Brush: </li>
+          <li>After Brush: </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section-label" id="table">Data table</p>
+    <div id="tableContainer"></div>
+
+    <p class="section-label" id="chart">Chart</p>
+    <canvas id="myChart"></canvas>
+
+    <div class="footer">
+      <a href="https://www.researchgate.net/publication/329318743_A_single_brushing_study_to_compare_plaque_removal_efficacy_of_a_manual_toothbrush_an_electric_toothbrush_and_an_ultrasonic_toothbrush" target="_blank" class="footer-link">View Research Paper (Data)</a>
+    </div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+  </body>
+</html>
